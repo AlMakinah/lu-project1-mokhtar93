@@ -1,25 +1,56 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import "./styles.css"
+import Card from '../src/components/card'
+import CardList from '../src/components/cardList'
+import { Page } from "../src/components/form"
+import "./styles.css"
+import Navbar from '../src/components/navbar'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Navbar/>
+        <CardList items={[
+           {
+            views: 3000,
+            likes: 200,
+            comments: 2,
+            img: "http://cdn.akc.org/content/hero/pug-breed-header.jpg"
+          },
+          {
+            views: 2000,
+            likes: 300,
+            comments: 2,
+            img: "http://www.gamba.fm/wp/wp-content/uploads/2018/09/Pizza.jpg"
+          },
+          {
+            views: 1000,
+            likes: 400,
+            comments: 2,
+            img: "http://www.gamba.fm/wp/wp-content/uploads/2018/09/Pizza.jpg"
+          },
+          {
+            views: 23232,
+            likes: 500,
+            comments: 2,
+            img: "http://www.gamba.fm/wp/wp-content/uploads/2018/09/Pizza.jpg"
+          },
+          {
+            views: 23232,
+            likes: 500,
+            comments: 2,
+            img: "http://www.gamba.fm/wp/wp-content/uploads/2018/09/Pizza.jpg"
+          },
+          {
+            views: 23232,
+            likes: 500,
+            comments: 2,
+            img: "http://www.gamba.fm/wp/wp-content/uploads/2018/09/Pizza.jpg"
+          }
+        ]} />
       </div>
     );
   }
